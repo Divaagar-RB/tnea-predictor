@@ -29,13 +29,13 @@ def predict():
         cutoff = float(request.form['cutoff'])
         community = request.form['community']
 
-        
+       
         filtered = allotment_df[allotment_df['COMMUNITY'] == community]
         eligible = filtered[filtered['CUTOFF'] <= cutoff]
 
         merged = pd.merge(eligible, college_df, left_on='COLLEGE CODE', right_on='Code', how='left')
 
-        # Clean and map the type values
+   
         merged['Type'] = merged['Type'].astype(str).str.upper().str.strip().str.replace(r'\s+', ' ', regex=True)
         merged['Type'] = merged['Type'].map(type_mapping)
 
@@ -57,5 +57,4 @@ def predict():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    from os import environ
-    app.run(host='0.0.0.0', port=int(environ.get("PORT", 5000)))
+    app.run(debug=True)
