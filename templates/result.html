@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Predicted Colleges</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 0 auto;
+            max-width: 95vw;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Likely Allotted Colleges and Branches</h2>
+    {{ tables|safe }}
+</body>
+</html>

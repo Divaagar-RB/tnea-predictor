@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('gct2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+form{
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    padding:40px;
+    
+  
+
+}
+.submit-button{
+    display:flex;
+    justify-content: center;
+}
+
+button[type="submit"]{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button[type="submit"]:hover{
+    background-color: aliceblue;
+    color:#007bff;
+}
+
+label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input,select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    
+}
